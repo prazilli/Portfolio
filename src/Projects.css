@@ -82,3 +82,12 @@
 .project-card:hover .project-image {
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    width: 90%;
+  }
+}

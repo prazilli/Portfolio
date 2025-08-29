@@ -102,3 +102,12 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+  .internship-container {
+    flex-wrap: wrap;       /* allow wrapping */
+    justify-content: center;
+  }
+  .internship-card {
+    max-width: 90%;
+  }
+}

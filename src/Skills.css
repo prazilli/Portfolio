@@ -96,3 +96,11 @@
   line-height: 1.6;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 40px 10px;
+  }
+  .skill-item {
+    padding: 20px;
+  }
+}

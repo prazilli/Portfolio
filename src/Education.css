@@ -100,3 +100,14 @@
   margin-top: 5px;
   font-style: italic;
 }
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 10px;
+  }
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-content {
+    font-size: 0.9rem;
+  }
+}

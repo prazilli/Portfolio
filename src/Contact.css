@@ -222,3 +222,67 @@
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 6px 18px rgba(74, 144, 226, 0.3);
 }
+/* Default layout (for desktop) */
+.contact-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each card */
+.contact-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .contact-card {
+    flex: 1 1 45%; /* two per row */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-card {
+    width: 90%;  /* full width on mobile */
+    max-width: 350px;
+  }
+}
+/* Mobile fix for contact cards */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-wrap: wrap;         /* allow wrapping */
+    justify-content: center;
+  }
+  .contact-card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;
+  }
+  .contact-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}

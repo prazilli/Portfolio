@@ -327,24 +327,32 @@ body {
     flex-direction: column;
   }
 }
-/* Tablet */
+/* Responsive Header */
 @media (max-width: 768px) {
-  .section {
-    padding: 20px;
+  .header-content {
+    flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .profile-pic {
+    margin-top: 0;
+    width: 200px;
+  }
+
+  .digital-poetry {
+    text-align: center;
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .header h1 {
+    font-size: 2rem;
   }
-  .navbar {
-    flex-direction: column;
-    align-items: center;
+  .header h2 {
+    font-size: 1.2rem;
+  }
+  .header-bio {
+    font-size: 1rem;
   }
 }

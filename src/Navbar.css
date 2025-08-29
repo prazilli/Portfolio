@@ -90,3 +90,17 @@
   color: #82a1c4;
   border-radius: 8px;
 }
+/* Mobile navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    width: 100%;
+  }
+}
