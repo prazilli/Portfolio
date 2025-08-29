@@ -1,0 +1,98 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap');
+
+.skills-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8fbff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.skills-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #2d3a4b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #4a90e2;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 skills per row on PC */
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets & mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr; /* 1 per row on very small screens */
+  }
+}
+
+
+/* Skill card */
+.skill-item {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  animation: pulse 2.5s infinite;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.3) rotate(10deg);
+  color: #2d3a4b;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.skill-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2d3a4b;
+  font-weight: 600;
+}
+
+.skill-item p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,113 @@
+/* Importing modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap');
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f8fbff; /* minimal light blue background */
+  min-height: 100vh;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  animation: fadeInUp 1s ease-in-out;
+  margin-top: -150px;
+}
+
+/* Small circle design */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 25px;
+  height: 25px;
+  background: #4a90e2; /* soft dark blue */
+  border-radius: 50%;
+}
+
+.about-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #2d3a4b;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #5f6c7b;
+  margin-bottom: 24px;
+}
+
+.about-content {
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.about-funfacts {
+  background: #f0f6ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.fun-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2d3a4b;
+}
+
+.about-funfacts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-funfacts li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-funfacts li::before {
+  content: "•";
+  color: #4a90e2;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Smooth fade in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    
+  }
+  

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+body {
+  height: 100vh;
+}
+/* Header Section */
+.header {
+  position: relative;
+
+  padding: 100px 20px;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa); /* soft light gradient */
+  color: #000; /* all text black */
+}
+
+.header::before,
+.header::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 179, 228, 0.1); /* soft light teal */
+  width: 400px;
+  height: 400px;
+  animation: float 15s infinite linear;
+  z-index: 0;
+  
+}
+
+.header::after {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 60%;
+  animation-duration: 20s;
+}
+
+.header::before {
+  top: -100px;
+  left: -100px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(20px) translateX(20px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px;
+  z-index: 1;
+}
+
+.header-text {
+  flex: 1;
+}
+
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Animation delays in sequence */
+.delay-1 { animation-delay: 0s; }     /* Welcome Popup */
+    /* Digital Poetry */
+   /* Contact Links */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Text */
+.header h1 {
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  color: #000; /* black */
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000; /* black */
+}
+
+.header-bio {
+  font-size: 1.25rem;
+  color: #222;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 20px 0;
+  font-style: italic;
+  padding: 10px 15px;
+}
+
+/* Key Skills */
+.header-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.header-skills span {
+  background: rgba(0, 179, 228, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #000;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-skills span:hover {
+  transform: scale(1.1);
+  background: rgba(0, 179, 228, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 179, 228, 0.2);
+}
+
+/* Tagline */
+.header-tagline {
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* Contact Links */
+.header-links a {
+  margin: 0 12px;
+  font-weight: 600;
+  color: #0073e6;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-links a:hover {
+  color: #0096c7;
+  transform: scale(1.05);
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 280px;
+  height: auto;
+  border-radius: 20px;
+  border: 3px solid rgba(0,0,0,0.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: -350px;
+}
+
+/* Floating animation for profile pic */
+
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+/* Digital Poetry Heading */
+.digital-poetry {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 15px;
+  text-align: left;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.digital-poetry:hover {
+  transform: scale(1.05);
+  color: #333;
+}
+
+.digital-poetry.fade-in {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Welcome Popup Styling */
+.welcome-popup {
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  max-width: 320px;
+  background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+  color: #000;
+  padding: 18px 22px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(-120%);
+  animation: slideInLeft 0.8s forwards;
+  animation-delay: 0s; /* popup first */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.welcome-popup:hover {
+  transform: translateX(0) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.welcome-popup p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: #222;
+}
+/* Resume Download Button */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #5ba2ee;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  
+ 
+}
+
+.download-btn:hover {
+  background-color: #4c93b9; 
+  
+}
+/* Mission & Vision Styling */
+.header-mission-vision {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* stacked vertically */
+  gap: 25px;
+  max-width: 700px;
+}
+
+/* Box Styling */
+.scroll-box {
+  background: #fff4e6; /* pastel orange for mission by default */
+  padding: 20px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+/* Hover effect for all boxes */
+.scroll-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* Separate colors for Mission and Vision */
+.header-mission-vision .mission {
+  background:  #e6f9ed;/* pastel orange */
+}
+.header-mission-vision .vision {
+  background: #e6f9ed; /* pastel green */
+}
+
+/* Headings */
+.header-mission-vision h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Paragraphs */
+.header-mission-vision p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Floating animation for subtle movement */
+.scroll-box {
+  animation: floatBox 6s ease-in-out infinite;
+}
+
+@keyframes floatBox {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: keep vertical stacking */
+@media screen and (min-width: 900px) {
+  .header-mission-vision {
+    flex-direction: column;
+  }
+}
