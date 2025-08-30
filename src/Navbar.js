@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
-      <ul className="navbar-links">
+      <div className="navbar-logo">
+        <Link to="/" onClick={closeMenu}>Pratiksha</Link>
+      </div>
+      
+      <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={closeMenu}>Home</Link>
         </li>
 
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
         </li>
 
         {/* Dropdown for Academics */}
@@ -19,27 +39,27 @@ const Navbar = () => {
           <span className="dropdown-title">Academics ▾</span>
           <ul className="dropdown-menu">
             <li>
-              <Link to="/education">Education</Link>
+              <Link to="/education" onClick={closeMenu}>Education</Link>
             </li>
             <li>
-              <Link to="/internships">Internships</Link>
+              <Link to="/internships" onClick={closeMenu}>Internships</Link>
             </li>
             <li>
-              <Link to="/certifications">Certifications</Link>
+              <Link to="/certifications" onClick={closeMenu}>Certifications</Link>
             </li>
           </ul>
         </li>
 
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" onClick={closeMenu}>Projects</Link>
         </li>
 
         <li>
-          <Link to="/skills">Skills</Link>
+          <Link to="/skills" onClick={closeMenu}>Skills</Link>
         </li>
 
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </li>
       </ul>
     </nav>

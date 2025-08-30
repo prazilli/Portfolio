@@ -31,6 +31,7 @@
   justify-content: center;
   gap: 28px;
   max-width: 1200px;
+  width: 100%;
 }
 
 /* Card Styles */
@@ -100,12 +101,251 @@
   background-color: #357abd;
   transform: scale(1.05);
 }
-@media (max-width: 768px) {
+
+/* Responsive Design - Mobile First Approach */
+
+/* Large screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+  .certs-section {
+    padding: 80px 40px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .certs-grid {
+    gap: 35px;
+    max-width: 1400px;
+  }
+  
+  .cert-card {
+    width: 380px;
+    padding: 30px;
+  }
+  
+  .cert-emoji {
+    font-size: 3.5rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .cert-meta {
+    font-size: 1rem;
+  }
+  
+  .view-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Large screens (1200px to 1399px) */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .certs-section {
+    padding: 70px 30px;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 45px;
+  }
+  
+  .certs-grid {
+    gap: 32px;
+  }
+  
+  .cert-card {
+    width: 350px;
+    padding: 28px;
+  }
+  
+  .cert-emoji {
+    font-size: 3.2rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium screens (900px to 1199px) */
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .certs-section {
+    padding: 60px 25px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .certs-grid {
+    gap: 28px;
+  }
+  
+  .cert-card {
+    width: 320px;
+    padding: 24px;
+  }
+}
+
+/* Small tablets (768px to 899px) */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .certs-section {
+    padding: 50px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+  }
+  
+  .certs-grid {
+    gap: 25px;
+  }
+  
+  .cert-card {
+    width: 300px;
+    padding: 22px;
+  }
+  
+  .cert-emoji {
+    font-size: 2.8rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .cert-meta {
+    font-size: 0.9rem;
+  }
+  
+  .view-btn {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices (480px to 767px) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .certs-section {
+    padding: 40px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
   .certs-grid {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
+  
   .cert-card {
     width: 90%;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .cert-emoji {
+    font-size: 2.5rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cert-meta {
+    font-size: 0.85rem;
+  }
+  
+  .view-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices (up to 479px) */
+@media screen and (max-width: 479px) {
+  .certs-section {
+    padding: 30px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+  
+  .certs-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .cert-card {
+    width: 95%;
+    padding: 18px;
+  }
+  
+  .cert-emoji {
+    font-size: 2.2rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 1rem;
+  }
+  
+  .cert-meta {
+    font-size: 0.8rem;
+  }
+  
+  .view-btn {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (up to 320px) */
+@media screen and (max-width: 320px) {
+  .certs-section {
+    padding: 25px 8px;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .certs-grid {
+    gap: 15px;
+  }
+  
+  .cert-card {
+    width: 98%;
+    padding: 15px;
+  }
+  
+  .cert-emoji {
+    font-size: 2rem;
+  }
+  
+  .cert-card h3 {
+    font-size: 0.95rem;
+  }
+  
+  .cert-meta {
+    font-size: 0.75rem;
+  }
+  
+  .view-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

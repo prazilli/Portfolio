@@ -105,9 +105,247 @@
     transform: translateY(0);
   }
 }
-html, body {
-    margin: 0;
-    padding: 0;
-    
+
+/* Responsive Design - Mobile First Approach */
+
+/* Large screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+  .about-section {
+    padding: 80px 40px;
   }
+  
+  .about-card {
+    max-width: 800px;
+    padding: 50px;
+    margin-top: -200px;
+  }
+  
+  .about-heading {
+    font-size: 2.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+  }
+  
+  .fun-title {
+    font-size: 1.4rem;
+  }
+  
+  .about-funfacts li {
+    font-size: 1rem;
+  }
+}
+
+/* Large screens (1200px to 1399px) */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-section {
+    padding: 70px 30px;
+  }
+  
+  .about-card {
+    max-width: 750px;
+    padding: 45px;
+    margin-top: -180px;
+  }
+  
+  .about-heading {
+    font-size: 2.2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about-text {
+    font-size: 1.05rem;
+  }
+}
+
+/* Medium screens (900px to 1199px) */
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .about-section {
+    padding: 60px 25px;
+  }
+  
+  .about-card {
+    max-width: 700px;
+    padding: 40px;
+    margin-top: -150px;
+  }
+  
+  .about-heading {
+    font-size: 2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+/* Small tablets (768px to 899px) */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .about-section {
+    padding: 50px 20px;
+  }
+  
+  .about-card {
+    max-width: 650px;
+    padding: 35px;
+    margin-top: -120px;
+  }
+  
+  .about-heading {
+    font-size: 1.8rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+  }
+  
+  .fun-title {
+    font-size: 1.1rem;
+  }
+  
+  .about-funfacts li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile devices (480px to 767px) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .about-section {
+    padding: 40px 15px;
+  }
+  
+  .about-card {
+    max-width: 100%;
+    padding: 30px 25px;
+    margin-top: -80px;
+  }
+  
+  .about-heading {
+    font-size: 1.6rem;
+  }
+  
+  .about-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .about-text {
+    font-size: 0.9rem;
+  }
+  
+  .about-funfacts {
+    padding: 18px;
+  }
+  
+  .fun-title {
+    font-size: 1rem;
+  }
+  
+  .about-funfacts li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small mobile devices (up to 479px) */
+@media screen and (max-width: 479px) {
+  .about-section {
+    padding: 30px 10px;
+  }
+  
+  .about-card {
+    padding: 25px 20px;
+    margin-top: -60px;
+  }
+  
+  .about-heading {
+    font-size: 1.4rem;
+  }
+  
+  .about-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .about-text {
+    font-size: 0.85rem;
+  }
+  
+  .about-funfacts {
+    padding: 15px;
+  }
+  
+  .fun-title {
+    font-size: 0.95rem;
+  }
+  
+  .about-funfacts li {
+    font-size: 0.8rem;
+    padding-left: 18px;
+  }
+  
+  .about-funfacts li::before {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small devices (up to 320px) */
+@media screen and (max-width: 320px) {
+  .about-section {
+    padding: 25px 8px;
+  }
+  
+  .about-card {
+    padding: 20px 15px;
+    margin-top: -40px;
+  }
+  
+  .about-heading {
+    font-size: 1.2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .about-text {
+    font-size: 0.8rem;
+  }
+  
+  .about-funfacts {
+    padding: 12px;
+  }
+  
+  .fun-title {
+    font-size: 0.9rem;
+  }
+  
+  .about-funfacts li {
+    font-size: 0.75rem;
+    padding-left: 15px;
+  }
+  
+  .about-funfacts li::before {
+    font-size: 1rem;
+  }
+}
+
+/* Base styles for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+}
   
