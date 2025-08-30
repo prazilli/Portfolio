@@ -15,9 +15,6 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/" onClick={closeMenu}>Pratiksha</Link>
-      </div>
       
       <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
         <span></span>

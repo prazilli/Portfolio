@@ -4,6 +4,9 @@ import "./About.css";
 const About = () => {
   return (
     <section className="about-section">
+      {/* Main heading above the card */}
+      <h2 className="about-main-heading">About Me</h2>
+
       <div className="about-card">
         <h2 className="about-heading">👋 Hi, I'm Pratiksha</h2>
         <p className="about-subtitle">A Computer Science Student & Aspiring Developer</p>

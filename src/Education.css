@@ -2,30 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap');
 
 .education-section {
-  padding: 60px 20px;
-  background: #f8fbff;
+  padding: 120px 20px 60px;
+  background: linear-gradient(180deg, #f9fcff, #e3f2fd);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  animation: fadeInUp 1s ease-in-out;
   font-family: 'Poppins', sans-serif;
 }
 
 /* Section Heading */
 .education-section h2 {
-  margin-top: -100px;
+  /* Removed negative margin so it won't go behind navbar */
+  margin-top: 0; 
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 40px;
-  color: #2d3a4b; /* dark elegant blue */
+  margin-bottom: 50px;
+  color: #2d3a4b; /* dark elegant blue for visibility */
   text-transform: uppercase;
   letter-spacing: 1px;
-  display: inline-block;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #4a90e2; /* subtle blue underline */
+  border: none; /* remove underline */
+  margin-top: 10px;
 }
 
 /* Timeline Layout */
@@ -47,7 +46,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #d0def5; /* subtle soft blue line */
+  background: rgb(209, 198, 198); /* soft white line */
   border-radius: 4px;
 }
 
@@ -56,6 +55,7 @@
   position: relative;
   margin: 30px 0;
   padding-left: 60px;
+  margin-top: 10px;
 }
 
 /* Dots */
@@ -65,360 +65,55 @@
   top: 12px;
   width: 18px;
   height: 18px;
-  background: #4a90e2; /* elegant blue dot */
+  background: #90cbeb; /* strong blue dot */
   border-radius: 50%;
   border: 3px solid #fff;
-  box-shadow: 0 0 0 3px #d0def5;
+  box-shadow: 0 0 0 4px rgba(0, 119, 182, 0.2); /* glowing effect */
 }
 
-/* Content */
+/* Content Box */
 .timeline-content {
   background: #ffffff;
-  padding: 18px 22px;
+  padding: 20px 25px;
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: -2.5px;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .timeline-content h3 {
   margin: 0 0 8px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #2d3a4b;
+  color: black; /* title */
 }
 
 .timeline-content p {
   margin: 0 0 6px;
   font-size: 1rem;
-  color: #555;
+  color: #333; /* darker for readability */
 }
 
 .timeline-meta {
   font-size: 0.9rem;
-  color: #777;
+  color: #555;
   display: block;
   margin-top: 5px;
   font-style: italic;
 }
 
-/* Responsive Design - Mobile First Approach */
-
-/* Large screens (1400px and up) */
-@media screen and (min-width: 1400px) {
-  .education-section {
-    padding: 80px 40px;
-  }
-  
-  .education-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-  
-  .timeline {
-    max-width: 900px;
-  }
-  
-  .timeline-item {
-    margin: 35px 0;
-    padding-left: 70px;
-  }
-  
-  .timeline::before {
-    left: 30px;
-    width: 4px;
-  }
-  
-  .timeline-point {
-    left: 20px;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .timeline-content {
-    padding: 22px 28px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .timeline-content p {
-    font-size: 1.1rem;
-  }
-  
-  .timeline-meta {
-    font-size: 1rem;
-  }
-}
-
-/* Large screens (1200px to 1399px) */
-@media screen and (min-width: 1200px) and (max-width: 1399px) {
-  .education-section {
-    padding: 70px 30px;
-  }
-  
-  .education-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 45px;
-  }
-  
-  .timeline {
-    max-width: 850px;
-  }
-  
-  .timeline-item {
-    margin: 32px 0;
-    padding-left: 65px;
-  }
-  
-  .timeline::before {
-    left: 28px;
-  }
-  
-  .timeline-point {
-    left: 18px;
-    width: 19px;
-    height: 19px;
-  }
-  
-  .timeline-content {
-    padding: 20px 25px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.3rem;
-  }
-  
-  .timeline-content p {
-    font-size: 1.05rem;
-  }
-}
-
-/* Medium screens (900px to 1199px) */
-@media screen and (min-width: 900px) and (max-width: 1199px) {
-  .education-section {
-    padding: 60px 25px;
-  }
-  
+/* Responsive (keep same breakpoints as before) */
+@media screen and (max-width: 767px) {
   .education-section h2 {
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-top: 0; /* keep heading visible on mobile too */
   }
-  
-  .timeline {
-    max-width: 800px;
-  }
-  
-  .timeline-item {
-    margin: 30px 0;
-    padding-left: 60px;
-  }
-  
-  .timeline::before {
-    left: 25px;
-  }
-  
-  .timeline-point {
-    left: 16px;
-    width: 18px;
-    height: 18px;
-  }
-  
-  .timeline-content {
-    padding: 18px 22px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.2rem;
-  }
-  
-  .timeline-content p {
-    font-size: 1rem;
-  }
-}
-
-/* Small tablets (768px to 899px) */
-@media screen and (min-width: 768px) and (max-width: 899px) {
-  .education-section {
-    padding: 50px 20px;
-  }
-  
-  .education-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 35px;
-  }
-  
-  .timeline {
-    max-width: 700px;
-  }
-  
-  .timeline-item {
-    margin: 28px 0;
-    padding-left: 55px;
-  }
-  
-  .timeline::before {
-    left: 22px;
-  }
-  
-  .timeline-point {
-    left: 14px;
-    width: 16px;
-    height: 16px;
-  }
-  
   .timeline-content {
     padding: 16px 20px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.95rem;
-  }
-  
-  .timeline-meta {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mobile devices (480px to 767px) */
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .education-section {
-    padding: 40px 15px;
-  }
-  
-  .education-section h2 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    margin-top: -50px;
-  }
-  
-  .timeline {
-    max-width: 100%;
-  }
-  
-  .timeline-item {
-    margin: 25px 0;
-    padding-left: 50px;
-  }
-  
-  .timeline::before {
-    left: 18px;
-    width: 2px;
-  }
-  
-  .timeline-point {
-    left: 12px;
-    width: 14px;
-    height: 14px;
-  }
-  
-  .timeline-content {
-    padding: 15px 18px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-  
-  .timeline-meta {
-    font-size: 0.8rem;
-  }
-}
-
-/* Small mobile devices (up to 479px) */
-@media screen and (max-width: 479px) {
-  .education-section {
-    padding: 30px 10px;
-  }
-  
-  .education-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    margin-top: -30px;
-  }
-  
-  .timeline-item {
-    margin: 20px 0;
-    padding-left: 40px;
-  }
-  
-  .timeline::before {
-    left: 10px;
-    width: 2px;
-  }
-  
-  .timeline-point {
-    left: 8px;
-    width: 12px;
-    height: 12px;
-  }
-  
-  .timeline-content {
-    padding: 12px 15px;
-    font-size: 0.9rem;
-  }
-  
-  .timeline-content h3 {
-    font-size: 0.95rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.85rem;
-  }
-  
-  .timeline-meta {
-    font-size: 0.75rem;
-  }
-}
-
-/* Extra small devices (up to 320px) */
-@media screen and (max-width: 320px) {
-  .education-section {
-    padding: 25px 8px;
-  }
-  
-  .education-section h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    margin-top: -20px;
-  }
-  
-  .timeline-item {
-    margin: 18px 0;
-    padding-left: 35px;
-  }
-  
-  .timeline::before {
-    left: 8px;
-    width: 2px;
-  }
-  
-  .timeline-point {
-    left: 6px;
-    width: 10px;
-    height: 10px;
-  }
-  
-  .timeline-content {
-    padding: 10px 12px;
-  }
-  
-  .timeline-content h3 {
-    font-size: 0.9rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.8rem;
-  }
-  
-  .timeline-meta {
-    font-size: 0.7rem;
   }
 }

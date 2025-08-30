@@ -9,6 +9,7 @@
   align-items: center;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
+  margin-top: 10px;
 }
 
 .section-title {
@@ -21,8 +22,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #4a90e2; /* ✅ same underline as Education */
+  margin-top: 10px;
+ 
+  
 }
 
 .internship-container {
@@ -33,6 +35,7 @@
   max-width: 1200px;
   width: 100%;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .internship-card {
